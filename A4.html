@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+</head>
+
+<body>
+    <p id="browser"></p>
+    <p id="size"></p>
+</body>
+<script>
+    var b = "Browser Name: " + navigator.appName;
+    document.write(b);
+    document.write("<br>");
+    const screenHeight = "ScreenHeight: "+window.screen.height;
+    const screenWidth = "ScreenWidth: "+window.screen.width;
+    document.write(screenHeight);
+    document.write("<br>");
+    document.write(screenWidth);
+    const modified="lastModified: "+document.lastModified ;
+    document.write("<br>");
+    document.write(modified);
+</script>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+</head>
+
+<body>
+    <h1 id="heading"></h1>
+</body>
+<script>
+    let person = prompt("Enter your name?");
+    
+    document.getElementById("heading").innerHTML=`This is ${person}'s mad-lib.`;
+    const element = [];
+    for (let i = 1; i < 6; i++) {
+        element[i] = prompt(`Enter the ${i} word `);
+
+    }
+
+    let c = prompt("Enter a color");
+    for (let i = 1; i < 6; i++) {
+        element[i]=`<span style='color:${c} font:cursive font-weight:bold>${element[i]}</span>`;
+
+    }
+   
+    document.write(`<h3>You do not like green eggs and ham?<br>
+I do not like them, Sam-I-am.<br>
+Could you, would you, with a goat?<br>
+I would not, could not, with a goat!<br>
+Would you, ${element[1]} you, on a boat?<br>
+I could not, would not, on a boat.<br>
+I will not, will not, with a ${element[2]}.<br>
+I will not eat them in the rain.<br>
+I ${element[3]} not eat them on a train.<br>
+Not in the dark! Not in a ${element[4]}!<br>
+Not in a car! You let me be!<br>
+I do not like them in a box.<br>
+I do not like ${element[5]} with a fox.<br>
+I will not eat them in a house.<br>
+I do not like them with a mouse.<br>
+I do not like them here or there.<br>
+I do not like them ANYWHERE!<br>
+I do not like green eggs and ham!<br>
+I do not like them, Sam-I-am.</h3><br> `)
+
+
+
+</script>
+
+</html>
