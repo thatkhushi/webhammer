@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 15</title>
+</head>
+
+<body>
+    <img src="laughing.png" alt="" srcset="" id="image" style="height:300px; cursor: pointer;">
+    <div>
+        <button id="back" style="margin-left:60px; height: 30px;" onclick="changeIt('previous')">Backward</button>
+        <button id="next" style="margin:20px; height: 30px;" onclick="changeIt('next')">Forward</button>
+    </div>
+</body>
+<script>
+    let count = 0;
+    function changeIt(direction) {
+        if (direction == "next") {
+            count++;
+        }
+        else {
+            count--;
+        }
+        if (count == 0) {
+            document.getElementById("image").src = "laughing.png";
+            document.getElementById("back").disabled=true;
+
+        }
+        else if (count == 1) {
+            document.getElementById("image").src = "oneeyeclose.png";
+            document.getElementById("next").disabled=false;
+
+        }
+        else if (count == 2) {
+            document.getElementById("image").src = "random.png";
+
+        }
+        else if (count == 3) {
+            document.getElementById("image").src = "satisfaction.png";
+            document.getElementById("next").disabled=false;
+
+        }
+        else if (count == 4) {
+            document.getElementById("image").src = "cute.png";
+            document.getElementById("next").disabled=true;
+
+        }
+    }
+
+</script>
+
+</html>
